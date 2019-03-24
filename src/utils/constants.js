@@ -21,4 +21,4 @@ export const HIDE_SNACKBAR = `HIDE_SNACKBAR`;
 export const UPDATING_PROJECT = `UPDATING_PROJECT`;
 export const FINISHED_CREATING_UPDATING_PROJECT = `FINISHED_CREATING_UPDATING_PROJECT`;
 
-export const BASE_API_URL = 'http://PortfolioApi-env.vwphbpfx2y.us-east-1.elasticbeanstalk.com/'
+export const BASE_API_URL = 'https://PortfolioApi-env.vwphbpfx2y.us-east-1.elasticbeanstalk.com/'
