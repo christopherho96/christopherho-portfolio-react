@@ -85,6 +85,8 @@ export class ProjectForm extends React.Component{
       id: this.props.getSelectedProjectForUpdating.id,
       title: this.props.getSelectedProjectForUpdating.title,
       type: this.props.getSelectedProjectForUpdating.type,
+      technologies: this.props.getSelectedProjectForUpdating.technologies,
+      summary: this.props.getSelectedProjectForUpdating.summary,
       thumbnail: '',
       description: this.props.getSelectedProjectForUpdating.description,
       pictures: [],
@@ -102,6 +104,8 @@ export class ProjectForm extends React.Component{
       id: undefined,
       title: '',
       type: '',
+      technologies: '',
+      summary: '',
       thumbnail: '',
       description: '',
       pictures: [],
@@ -179,6 +183,36 @@ export class ProjectForm extends React.Component{
                   variant="outlined"
                   multiline={true}
                   fullWidth={true}
+                />
+              </Grid>
+              <Grid item xs= {12}>
+                <TextField
+                  id="outlined-type"
+                  label="Technologies"
+                  value={this.state.technologies}
+                  onChange={this.handleChange('technologies')}
+                  margin="normal"
+                  variant="outlined"
+                  multiline={true}
+                  fullWidth={true}
+                  inputProps={{
+                    maxLength: 140,
+                  }}
+                />
+              </Grid>
+              <Grid item xs= {12}>
+                <TextField
+                  id="outlined-type"
+                  label="Summary"
+                  value={this.state.summary}
+                  onChange={this.handleChange('summary')}
+                  margin="normal"
+                  variant="outlined"
+                  multiline={true}
+                  fullWidth={true}
+                  inputProps={{
+                    maxLength: 140,
+                  }}
                 />
               </Grid>
               <Grid item xs={12} style={styles.thumbnailUpload}>

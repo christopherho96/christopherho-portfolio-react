@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import Showcase  from './Showcase';
 import ProjectDialog from './ProjectDialog';
 import ProfileDialog from './ProfileDialog';
-import ProjectThumbnails from './ProjectThumbnails';
+import ProjectCards from './ProjectCards';
 import {
   getProjects,
   openProjectDialog,
@@ -33,9 +33,7 @@ export class Home extends React.Component {
       closeEditDeveloperDialog,
       isProjectDialogOpen,
       currentSelectedProject,
-      projectSelected,
       showProjectThumbnails,
-      shouldShowProjectThumbnails,
       isProfileDialogOpen,
       closeProfileDialog,
       history
@@ -43,21 +41,17 @@ export class Home extends React.Component {
     
     return(
       <div>
-        <Showcase
-          history = {history}/>
-        <ProjectThumbnails
+        <Showcase/>
+        <ProjectCards
           projectsFound={projectsFound}
           openProjectDialog={openEditDeveloperDialog}
           showProjectThumbnails={showProjectThumbnails}
           history={history}
         />
         <ProjectDialog
-          projectsFound={projectsFound}
           project={currentSelectedProject}
-          selectProject={projectSelected}
           showDialog={isProjectDialogOpen}
           closeDialog={closeEditDeveloperDialog}
-          shouldShowProjectThumbnails={shouldShowProjectThumbnails}
           scroll='body'
         />
         <ProfileDialog
